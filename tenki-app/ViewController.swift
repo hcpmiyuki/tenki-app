@@ -95,5 +95,18 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func remained(_ sender: UIButton) {
+        //以下で登録処理
+        let content = UNMutableNotificationContent()
+        content.title = "hogehoge";
+        content.body = "swift-saralymanからの通知だよ";
+        content.sound = UNNotificationSound.default
+        let date = DateComponents(hour:21, minute:48)//(month:7, day:7, hour:12, minute:0)
+        let trigger = UNCalendarNotificationTrigger.init(dateMatching: date, repeats: true)//1回だけならrepeatsをfalseに
+        let request = UNNotificationRequest.init(identifier: "TestNotification", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
+    }
+    
 }
 

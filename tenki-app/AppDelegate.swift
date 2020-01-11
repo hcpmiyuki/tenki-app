@@ -7,14 +7,39 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // PUSH要求する
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.badge, .sound, .alert], completionHandler: { (granted, error) in
+                
+                if !granted {
+                    let alert = UIAlertController(title: "通知がOFF", message: "プッシュ通知がOFF。PUSHは届かない", preferredStyle: .alert)
+                    let cancelAction: UIAlertAction = UIAlertAction(title: "閉じる", style: UIAlertAction.Style.cancel, handler:{
+                        (action: UIAlertAction!) -> Void in
+                        print("cancelAction")
+                    })
+                    alert.addAction(cancelAction)
+                    self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+                } else {
+                    let alert = UIAlertController(title: "通知ON", message: "プッシュ通知がON。PUSHが届く", preferredStyle: .alert)
+                    let cancelAction: UIAlertAction = UIAlertAction(title: "閉じる", style: UIAlertAction.Style.cancel, handler:{
+                        (action: UIAlertAction!) -> Void in
+                        print("cancelAction")
+                    })
+                    alert.addAction(cancelAction)
+                    self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+                }
+            })
+        UNUserNotificationCenter.current().delegate = self
         return true
     }
 
@@ -33,5 +58,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            completionHandler([ .badge, .sound, .alert ])
+    }
 }
 
