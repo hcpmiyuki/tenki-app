@@ -14,6 +14,7 @@
 		D5CB200F23C8471F00AB25BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5CB200E23C8471F00AB25BE /* Assets.xcassets */; };
 		D5CB201223C8471F00AB25BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5CB201023C8471F00AB25BE /* LaunchScreen.storyboard */; };
 		D5CB201A23C8CD0600AB25BE /* WeeklyWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB201923C8CD0600AB25BE /* WeeklyWeatherViewController.swift */; };
+		D5CB201C23D2207F00AB25BE /* RemainderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB201B23D2207F00AB25BE /* RemainderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D5CB201123C8471F00AB25BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5CB201323C8471F00AB25BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5CB201923C8CD0600AB25BE /* WeeklyWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherViewController.swift; sourceTree = "<group>"; };
+		D5CB201B23D2207F00AB25BE /* RemainderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D5CB200923C8471900AB25BE /* ViewController.swift */,
 				D5CB201923C8CD0600AB25BE /* WeeklyWeatherViewController.swift */,
 				D5CB200B23C8471900AB25BE /* Main.storyboard */,
+				D5CB201B23D2207F00AB25BE /* RemainderViewController.swift */,
 				D5CB200E23C8471F00AB25BE /* Assets.xcassets */,
 				D5CB201023C8471F00AB25BE /* LaunchScreen.storyboard */,
 				D5CB201323C8471F00AB25BE /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5CB201A23C8CD0600AB25BE /* WeeklyWeatherViewController.swift in Sources */,
+				D5CB201C23D2207F00AB25BE /* RemainderViewController.swift in Sources */,
 				D5CB200A23C8471900AB25BE /* ViewController.swift in Sources */,
 				D5CB200623C8471900AB25BE /* AppDelegate.swift in Sources */,
 				D5CB200823C8471900AB25BE /* SceneDelegate.swift in Sources */,

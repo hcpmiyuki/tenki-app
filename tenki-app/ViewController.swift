@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     var screenWidth = UIScreen.main.bounds.size.width
     var screenHeight = UIScreen.main.bounds.size.height
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,6 +46,7 @@ class ViewController: UIViewController {
         getWeatherStatus()
     }
 
+    
     func getWeatherStatus(){
         let url = "http://127.0.0.1:5000/today-tomorrow-weather"
         var request = URLRequest(url: Foundation.URL(string: url)!)
@@ -85,6 +87,7 @@ class ViewController: UIViewController {
         getWeatherStatus()
     }
     
+    
     func startIndicator(){
         //インジケーター準備
         activityIndicatorView.frame = CGRect(x:screenWidth/2, y:screenHeight/2,  width:0, height:0)
@@ -94,6 +97,7 @@ class ViewController: UIViewController {
         self.view.addSubview(activityIndicatorView)
         
     }
+    
     
     @IBAction func remained(_ sender: UIButton) {
         //以下で登録処理

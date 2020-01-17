@@ -20,6 +20,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="dFY-LU-pTB"/>
                         <segue destination="ZJv-xP-jhC" kind="relationship" relationship="viewControllers" id="XwF-7O-WD3"/>
+                        <segue destination="4SG-qT-Q1q" kind="relationship" relationship="viewControllers" id="QPn-23-DiJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMT-uC-kSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -53,7 +54,73 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjT-2J-odA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-141" y="85"/>
+            <point key="canvasLocation" x="-42" y="-181"/>
+        </scene>
+        <!--リマインダー-->
+        <scene sceneID="UNk-m6-U8b">
+            <objects>
+                <viewController id="4SG-qT-Q1q" customClass="RemainderViewController" customModule="tenki_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="meN-YK-wRc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mbm-6D-Lxc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リマインダーを設定する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="880-bS-Brh">
+                                        <rect key="frame" x="60" y="16" width="295" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84090013779999995" green="1" blue="0.98608374750000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pEF-cH-WkQ">
+                                <rect key="frame" x="0.0" y="204" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84090013779999995" green="1" blue="0.98608374750000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZi-Ps-CGh">
+                                <rect key="frame" x="0.0" y="385" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84090013779999995" green="1" blue="0.98608374750000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pickerView>
+                            <button opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpZ-bY-R6L">
+                                <rect key="frame" x="145" y="581" width="124" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="設定する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bT-BU-mb9"/>
+                                    <action selector="set:" destination="4SG-qT-Q1q" eventType="touchUpInside" id="ZqM-8u-Fa5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リマインダーは設定されていません" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tp-b6-rx8">
+                                <rect key="frame" x="24" y="121" width="367" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dAK-Xf-3pc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="リマインダー" image="clock" catalog="system" id="B6S-T3-oIS"/>
+                    <connections>
+                        <outlet property="ExponentialPickerView" destination="lZi-Ps-CGh" id="Vrg-sM-K4y"/>
+                        <outlet property="TimePickerView" destination="pEF-cH-WkQ" id="ofI-6i-L93"/>
+                        <outlet property="remainder_status_label" destination="3tp-b6-rx8" id="6JS-3X-Jg3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pvt-rn-oTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.028985507246382" y="857.8125"/>
         </scene>
         <!--今日と明日-->
         <scene sceneID="tne-QT-ifu">
@@ -210,11 +277,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-143.47826086956522" y="-563.16964285714278"/>
+            <point key="canvasLocation" x="-42" y="-1094"/>
         </scene>
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="clock" catalog="system" width="64" height="60"/>
         <image name="hare-tab" width="40" height="40"/>
         <image name="huku" width="225" height="225"/>
     </resources>
