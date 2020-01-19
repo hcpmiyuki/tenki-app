@@ -236,25 +236,16 @@
                                     <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="owV-VA-bzr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHu-FS-kiO">
-                                <rect key="frame" x="316" y="703" width="92" height="30"/>
-                                <state key="normal" title="リマインダー"/>
-                                <connections>
-                                    <action selector="remained:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeZ-V8-bZg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2ve-XB-wik" firstAttribute="top" secondItem="gn4-vy-Ep2" secondAttribute="bottom" constant="16" id="1mK-yn-dr5"/>
                             <constraint firstItem="c9f-fJ-qDv" firstAttribute="centerX" secondItem="aJg-2B-n7L" secondAttribute="centerX" id="4iB-mx-UuE"/>
-                            <constraint firstItem="OHu-FS-kiO" firstAttribute="centerY" secondItem="c9f-fJ-qDv" secondAttribute="centerY" id="9wK-uB-9jQ"/>
                             <constraint firstItem="2ve-XB-wik" firstAttribute="leading" secondItem="aJg-2B-n7L" secondAttribute="leading" id="CZD-ug-S9f"/>
                             <constraint firstItem="gn4-vy-Ep2" firstAttribute="trailing" secondItem="2ve-XB-wik" secondAttribute="trailing" id="GDv-Um-o9V"/>
                             <constraint firstItem="2ve-XB-wik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JSR-KC-TtP"/>
                             <constraint firstItem="aJg-2B-n7L" firstAttribute="top" secondItem="2ve-XB-wik" secondAttribute="bottom" constant="17" id="Sbs-6a-tpc"/>
                             <constraint firstItem="c9f-fJ-qDv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="Tkp-P1-tgf"/>
-                            <constraint firstItem="OHu-FS-kiO" firstAttribute="leading" secondItem="c9f-fJ-qDv" secondAttribute="trailing" constant="47" id="To8-dT-Bsq"/>
                             <constraint firstItem="gn4-vy-Ep2" firstAttribute="leading" secondItem="2ve-XB-wik" secondAttribute="leading" id="Tuw-zP-7qf"/>
                             <constraint firstItem="gn4-vy-Ep2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WMO-HR-32V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c9f-fJ-qDv" secondAttribute="bottom" constant="63" id="Yot-UR-pwn"/>
